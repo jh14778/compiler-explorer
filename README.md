@@ -4,7 +4,7 @@
 Compiler Explorer
 ------------
 
-Compiler Explorer is an interactive compiler. The left-hand pane shows editable C/C++/Rust/Go/D/Haskell/Swift code. The right, the
+Compiler Explorer is an interactive compiler. The left-hand pane shows editable C/C++/Rust/Go/D/Haskell/Swift/XC code. The right, the
 assembly output of having compiled the code with a given compiler and settings. Multiple compilers are supported, and
 the UI layout is configurable (the [Golden Layout](https://www.golden-layout.com/) library is used for this).
 There is also an ispc compiler for a C variant with extensions for SPMD.
@@ -20,6 +20,10 @@ Try out one of the demo sites: [C++][cpp], [Rust][rust], [D][d], [Go][go], [Hask
 [swift]: https://swift.godbolt.org/ "Compiler Explorer for Swift"
 
 You can support this [this project on Patreon](https://patreon.com/mattgodbolt).
+
+### XC Setup
+
+Change the `compilers` and `defaultCompiler` value in etc/config/xc/default.properties to your local XMOS tools directory's xcc1llvm.
 
 ### Developing or running a local instance
 
@@ -71,7 +75,7 @@ To specify a compilation request as a JSON document, post it as the appropriate 
 the form: `{'source': 'source to compile', 'options': {userOptions': 'compiler flags', 'compilerOptions':{}, filters': {'filter': true}}}`.
 The filters are an JSON object with true/false. If not supplied, defaults are used. If supplied, the
 filters are used as-is. The `compilerOptions` is used to pass extra arguments to the back end, and is probably
-not useful for most REST users. 
+not useful for most REST users.
 
 A text compilation request has the source as the body of the post, and uses query parameters to pass the
 options and filters. Filters are supplied as a comma-separated string. Use the query parameter `filters=XX`
