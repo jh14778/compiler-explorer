@@ -23,7 +23,7 @@ You can support this [this project on Patreon](https://patreon.com/mattgodbolt).
 
 ### XC Setup
 
-Change the `compilers` and `defaultCompiler` value in etc/config/xc/default.properties to your local XMOS tools directory's xcc1llvm.
+Change the `compilers` and `defaultCompiler` values in etc/config/xc/default.properties to your local XMOS tools directory's xcc1llvm.
 
 ### Developing or running a local instance
 
