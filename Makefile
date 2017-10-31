@@ -71,9 +71,9 @@ LANG:=XC
 node_modules: $(NODE_MODULES)
 bower_modules: $(BOWER_MODULES)
 
-test: $(NODE_MODULES) lint
-	$(MAKE) -C c-preload test
-	@echo Tests pass
+# test: $(NODE_MODULES) lint
+# 	$(MAKE) -C c-preload test
+	# @echo Tests pass
 
 clean:
 	rm -rf bower_modules node_modules .npm-updated .bower-updated out static/ext
@@ -104,5 +104,5 @@ dist: prereqs
 	    --source-map-root //v/$(HASH)/ext/requirejs \
 	    --prefix 6
 
-c-preload:
-	$(MAKE) -C c-preload
+# c-preload:
+	# $(MAKE) -C c-preload
